@@ -3,30 +3,76 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HomePage</title>
-        <link rel="stylesheet" href="css/style.css">
-        </head> 
 
-        <body>
-         <nav>
-    <img src="images/logo.jpeg" class="nav-logo">
-    <a href = "index.html"> homePage </a>   
-    <a href = "gallery.html"> gallery </a>
-    <a href = "about.html"> about us </a>
-    <a href = "contact.html"> contact us </a>
-    <a href = "product_services.html"> our products/sevices </a>
-    </nav>    
-    <figure class="logo-container">
-        <img src="images/logo.jpeg" width="100" height="100">
-        <h2>makeup artist</h2>
-    </figure>
-    <h1>WELCOME TO SARAZ MAKEUP</h1>
- <body class="page-content">
+        <!-- SEO #1: Unique descriptive title -->
+        <title>Saraz Makeup Artist – Professional Makeup in Cape Town</title>
+
+        <!-- SEO #2: Description shown in Google results -->
+        <meta name="description" content="Saraz Makeup is a professional makeup artist based in Cape Town, South Africa. Specialising in bridal, soft glam and full glam looks with a luminous, lit-from-within technique.">
+
+        <!-- SEO #3: Keywords -->
+        <meta name="keywords" content="makeup artist Cape Town, bridal makeup South Africa, soft glam makeup Cape Town, full glam makeup Cape Town, professional makeup artist SA, Saraz makeup">
+
+        <!-- SEO #4: Author -->
+        <meta name="author" content="Saraz Makeup">
+
+        <!-- SEO #5: Tell Google to index this page -->
+        <meta name="robots" content="index, follow">
+
+        <!-- SEO #6: Open Graph — how page looks when shared on WhatsApp/Facebook -->
+        <meta property="og:title" content="Saraz Makeup Artist – Cape Town">
+        <meta property="og:description" content="Professional makeup artist in Cape Town specialising in bridal, soft glam and full glam. Book your appointment today.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="images/homepage.jpeg">
+        <meta property="og:locale" content="en_ZA">
+
+        <!-- SEO #7: Canonical URL -->
+        <link rel="canonical" href="index.html">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- SEO #8: Schema.org — lets Google show your business details in search -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BeautySalon",
+            "name": "Saraz Makeup",
+            "description": "Professional makeup artist based in Cape Town, South Africa. Specialising in bridal, soft glam and full glam makeup.",
+            "telephone": "+27720197504",
+            "email": "sarazmakeup.za@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Cape Town",
+                "addressCountry": "ZA"
+            }
+        }
+        </script>
+    </head> 
+
+    <body>
+        <nav>
+            <img src="images/logo.jpeg" class="nav-logo" alt="Saraz Makeup Artist logo">
+            <a href="index.html"> homePage </a>   
+            <a href="gallery.html"> gallery </a>
+            <a href="about.html"> about us </a>
+            <a href="contact.html"> contact us </a>
+            <a href="product_services.html"> our products/services </a>
+        </nav>    
+
+        <figure class="logo-container">
+            <img src="images/logo.jpeg" width="100" height="100" alt="Saraz Makeup Artist logo">
+            <h2>makeup artist</h2>
+        </figure>
+
+        <h1>WELCOME TO SARAZ MAKEUP</h1>
+
         <div class="image-row">
-            <img src="images/homepage.jpeg" width="400" height="400">
-            <img src="images/homepage 1.jpeg" width="400" height="400">
-            <img src="images/homepage 2.jpeg" width="400" height="400">
+            <img src="images/homepage.jpeg" width="400" height="400" alt="Professional makeup look by Saraz Makeup Cape Town">
+            <img src="images/homepage 1.jpeg" width="400" height="400" alt="Bridal makeup look by Saraz Makeup Cape Town">
+            <img src="images/homepage 2.jpeg" width="400" height="400" alt="Glam makeup look by Saraz Makeup Cape Town">
         </div>
-    <p1>MY TECHNIQUE can be described as luminous and lit from within. Brides often ask for a natural look, but I often do "Soft Glam" or "Full Glam" while still maintaining the lunious glow. I incorporate a light facial with natural skincare which is included in the package price, before make-up application to prep the skin adequately for a flawless finish.</p1>
-</body>
+
+        <p1>MY TECHNIQUE can be described as luminous and lit from within. Brides often ask for a natural look, but I often do "Soft Glam" or "Full Glam" while still maintaining the luminous glow. I incorporate a light facial with natural skincare which is included in the package price, before make-up application to prep the skin adequately for a flawless finish.</p1>
+
+    </body>
 </html>

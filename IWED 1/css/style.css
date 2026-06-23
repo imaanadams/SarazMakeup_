@@ -1,8 +1,3 @@
-
-/* ------------------------------------------------------------
-   COLOUR VARIABLES
-   Change one value here to update it everywhere on the site.
-   ------------------------------------------------------------ */
 :root {
     --pink:     #fce8e8;
     --nav-pink: #eebbbb;
@@ -13,61 +8,54 @@
     --font:     Georgia, 'Times New Roman', serif;
 }
 
-/* Full-page pink background so no white gaps on wide screens */
 html {
     background-color: var(--pink);
 }
 
-/* Centered content column with breathing room */
+/* UPDATED #3: max-width in % + relative padding */
 body {
     background-color: var(--pink);
-    max-width: 1100px;
+    max-width: 90%;           /* relative — was 1100px */
     margin: 0 auto;
-    padding: 0 30px 80px;
+    padding: 0 5% 5em;        /* relative — was 0 30px 80px */
     font-family: var(--font);
     color: var(--dark);
+    font-size: 1rem;          /* relative base for em/rem */
 }
 
 /* ------------------------------------------------------------
    NAVIGATION BAR
-   Uses flex so links stay perfectly centered while the logo
-   (positioned absolute) sits in the top-left corner.
    ------------------------------------------------------------ */
 nav {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px 24px;
+    padding: 1.25rem 1.5rem;   /* relative — was 20px 24px */
     background-color: var(--nav-pink);
     border: 1.5px solid #d4a0a0;
-    position: relative;  /* needed so .nav-logo can be absolute inside it */
+    position: relative;
+    gap: 0.5rem;
 }
 
-/* ------------------------------------------------------------
-   LOGO INSIDE NAV  (.nav-logo added to <img> inside <nav>)
-   position: absolute pulls it to the left edge of the nav bar
-   while the flex links remain centred.
-   ------------------------------------------------------------ */
 .nav-logo {
     position: absolute;
-    left: 20px;
+    left: 1.25rem;             /* relative — was 20px */
     top: 50%;
     transform: translateY(-50%);
-    width: 70px;
-    height: 70px;
+    width: 4.375rem;           /* relative — was 70px */
+    height: 4.375rem;
     object-fit: contain;
     border-radius: 8px;
 }
 
-/* Nav links */
 nav a {
     text-decoration: none;
     color: #333333;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;        /* relative — was 12px */
     letter-spacing: 1.5px;
-    margin: 0 16px;
+    margin: 0 1rem;            /* relative — was 0 16px */
     font-family: var(--font);
     transition: color 0.2s ease;
 }
@@ -78,8 +66,6 @@ nav a:hover {
 
 /* ------------------------------------------------------------
    HIDE OLD LOGO CONTAINERS
-   The logo is now inside the <nav> via .nav-logo, so the
-   original .logo-container divs/figures are hidden.
    ------------------------------------------------------------ */
 .logo-container {
     display: none;
@@ -87,102 +73,87 @@ nav a:hover {
 
 /* ------------------------------------------------------------
    PAGE HEADINGS
-   H1 centered and large — matches the reference screenshot.
    ------------------------------------------------------------ */
 h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 1.75rem;        /* relative — was 28px */
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--dark);
-    margin: 28px 0 6px;
+    margin: 1.75rem 0 0.375rem; /* relative */
     font-weight: bold;
 }
 
-/* ------------------------------------------------------------
-   "MAKEUP ARTIST" SUBTITLE  (.subtitle added after h1 in HTML)
-   Centred, small, light — sits directly under the main heading.
-   ------------------------------------------------------------ */
 .subtitle {
     text-align: center;
-    font-size: 15px;
+    font-size: 0.94rem;        /* relative — was 15px */
     letter-spacing: 1px;
     color: var(--mid);
-    margin: 0 0 22px;
+    margin: 0 0 1.375rem;
     font-weight: normal;
 }
 
-/* ------------------------------------------------------------
-   SECTION HEADINGS (h2 — used on gallery, about, etc.)
-   ------------------------------------------------------------ */
 h2 {
-    font-size: 15px;
+    font-size: 0.94rem;        /* relative — was 15px */
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--rose);
-    margin: 28px 0 10px;
+    margin: 1.75rem 0 0.625rem;
     font-weight: normal;
     border-bottom: 1px solid #e0b8b8;
-    padding-bottom: 6px;
+    padding-bottom: 0.375rem;
     text-align: center;
 }
 
 /* ------------------------------------------------------------
-   DESCRIPTION TEXT BOX  (the <p1> tag in the HTML)
-   Styled as a pink rounded card to match the reference.
-   display: block makes the non-standard <p1> behave like a
-   paragraph.  margin: auto centres it horizontally.
+   DESCRIPTION TEXT BOX
    ------------------------------------------------------------ */
 p1 {
     display: block;
     background-color: rgba(238, 187, 187, 0.3);
     border-radius: 12px;
-    padding: 22px 30px;
+    padding: 1.375rem 1.875rem; /* relative — was 22px 30px */
     max-width: 700px;
-    margin: 20px auto;
-    font-size: 14px;
+    margin: 1.25rem auto;
+    font-size: 0.875rem;       /* relative — was 14px */
     line-height: 1.85;
     color: #777777;
     text-align: center;
 }
 
-/* Standard paragraphs */
 p {
-    font-size: 15px;
+    font-size: 0.94rem;        /* relative — was 15px */
     line-height: 1.85;
     color: #555555;
     max-width: 750px;
-    margin: 14px 0;
+    margin: 0.875rem 0;
 }
 
-/* Lists */
 ul {
-    font-size: 15px;
+    font-size: 0.94rem;        /* relative — was 15px */
     line-height: 2;
     color: #555555;
-    padding-left: 20px;
-    margin: 10px 0;
+    padding-left: 1.25rem;     /* relative — was 20px */
+    margin: 0.625rem 0;
 }
 
 li {
-    margin-bottom: 2px;
+    margin-bottom: 0.125rem;
 }
 
 /* ------------------------------------------------------------
-   IMAGE ROW  (3 homepage images / behind-the-scenes images)
-   flex-wrap removed so all 3 always stay side-by-side.
-   flex: 1 1 0 makes each image share the width equally.
+   IMAGE ROW
    ------------------------------------------------------------ */
 .image-row {
     display: flex;
-    gap: 14px;
-    margin: 18px 0;
+    gap: 0.875rem;             /* relative — was 14px */
+    margin: 1.125rem 0;
 }
 
 .image-row img {
     flex: 1 1 0;
     min-width: 0;
-    height: 340px;
+    height: 21.25rem;          /* relative — was 340px */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -196,19 +167,19 @@ li {
 }
 
 /* ------------------------------------------------------------
-   GALLERY GRID  (category tiles on the gallery page)
+   GALLERY GRID
    ------------------------------------------------------------ */
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin: 8px 0 24px;
+    gap: 0.625rem;             /* relative — was 10px */
+    margin: 0.5rem 0 1.5rem;
 }
 
 .gallery-grid img {
-    width: 260px;
-    height: 260px;
+    width: 16.25rem;           /* relative — was 260px */
+    height: 16.25rem;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -220,19 +191,18 @@ li {
 }
 
 /* ------------------------------------------------------------
-   ABOUT PAGE FLEX  (photo left, bio text right)
-   object-position: top crops to the portrait face area.
+   ABOUT PAGE FLEX
    ------------------------------------------------------------ */
 .about-flex {
     display: flex;
-    gap: 40px;
+    gap: 2.5rem;               /* relative — was 40px */
     align-items: flex-start;
     flex-wrap: wrap;
-    margin: 18px 0;
+    margin: 1.125rem 0;
 }
 
 .about-flex img {
-    width: 300px;
+    width: 18.75rem;           /* relative — was 300px */
     height: auto;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -241,8 +211,8 @@ li {
 
 .about-text {
     flex: 1;
-    min-width: 200px;
-    padding-top: 6px;
+    min-width: 12.5rem;        /* relative — was 200px */
+    padding-top: 0.375rem;
 }
 
 /* ------------------------------------------------------------
@@ -251,8 +221,8 @@ li {
 table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 440px;
-    margin: 20px 0;
+    max-width: 27.5rem;        /* relative — was 440px */
+    margin: 1.25rem 0;
     font-family: var(--font);
     box-shadow: var(--shadow);
     border-radius: 10px;
@@ -262,18 +232,18 @@ table {
 th {
     background-color: var(--rose);
     color: white;
-    padding: 13px 22px;
+    padding: 0.8125rem 1.375rem; /* relative — was 13px 22px */
     text-align: left;
     letter-spacing: 2px;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: normal;
 }
 
 td {
-    padding: 12px 22px;
+    padding: 0.75rem 1.375rem; /* relative — was 12px 22px */
     border-bottom: 1px solid #e0b8b8;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--dark);
 }
 
@@ -290,58 +260,33 @@ tr:hover td {
 }
 
 /* ------------------------------------------------------------
-   VIDEO WRAPPER  (YouTube embed on products/services page)
+   VIDEO + IFRAMES
    ------------------------------------------------------------ */
 .video-wrapper {
-    margin: 14px 0 28px;
-}
-
-.video-wrapper iframe {
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    display: block;
-    border: none;
-}
-
-/* General iframes (Google Form on contact page) */
-iframe {
-    display: block;
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    margin: 16px 0;
-}
-
-/* Links */
-a {
-    color: var(--rose);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.video-wrapper {
-    width: 560px;
-    height: 315px;
+    margin: 0.875rem 0 1.75rem;
+    width: 100%;               /* UPDATED #3: was fixed 560px */
+    max-width: 35rem;
+    aspect-ratio: 16 / 9;      /* UPDATED #3: keeps ratio on all screens */
     position: relative;
 }
+
 .video-link {
     display: block;
     width: 100%;
     height: 100%;
     position: relative;
 }
+
 .video-thumbnail {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
-/* Play button styling */
+
 .play-button {
-    width: 70px;
-    height: 70px;
+    width: 4.375rem;
+    height: 4.375rem;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     position: absolute;
@@ -349,7 +294,7 @@ a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Triangle inside the circle */
+
 .play-button:after {
     content: '';
     position: absolute;
@@ -358,5 +303,182 @@ a:hover {
     border-style: solid;
     border-width: 15px 0 15px 25px;
     border-color: transparent transparent transparent white;
+}
 
+/* General iframes — UPDATED #3: fully fluid */
+iframe {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 1rem 0;
+    width: 100%;               /* UPDATED #3: was fixed 600px */
+    max-width: 100%;
+}
+
+a {
+    color: var(--rose);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   MEDIA QUERIES — ADDED FOR REQUIREMENT #3
+   ============================================================ */
+
+/* ── TABLET: screens up to 900px ── */
+@media (max-width: 900px) {
+
+    body {
+        padding: 0 4% 4em;
+    }
+
+    /* Nav: increase spacing so links wrap cleanly */
+    nav {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    /* Logo hides on smaller nav to save space */
+    .nav-logo {
+        display: none;
+    }
+
+    nav a {
+        margin: 0 0.6rem;
+        font-size: 0.7rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Image row: 2 images per row instead of 3 */
+    .image-row {
+        flex-wrap: wrap;
+    }
+
+    .image-row img {
+        flex: 1 1 45%;
+        height: 14rem;
+    }
+
+    /* About: stack photo above text */
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-flex img {
+        width: 100%;
+        max-width: 22rem;
+    }
+
+    /* Gallery: 2 columns */
+    .gallery-grid img {
+        width: 45%;
+        height: 12rem;
+    }
+}
+
+/* ── MOBILE: screens up to 600px ── */
+@media (max-width: 600px) {
+
+    body {
+        padding: 0 3% 3em;
+        font-size: 0.9rem;
+    }
+
+    /* Nav: stack links vertically */
+    nav {
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+        gap: 0.4rem;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 0.82rem;
+    }
+
+    p1 {
+        padding: 1rem;
+        font-size: 0.82rem;
+    }
+
+    /* Image row: single column on mobile */
+    .image-row {
+        flex-direction: column;
+    }
+
+    .image-row img {
+        width: 100%;
+        height: 12rem;
+    }
+
+    /* Gallery: single column */
+    .gallery-grid img {
+        width: 90%;
+        height: 11rem;
+    }
+
+    /* About: single column */
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-flex img {
+        width: 100%;
+    }
+
+    /* Table: scrollable on small screens */
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Google Form iframe: full width, shorter height */
+    iframe {
+        width: 100%;
+        height: 30rem;
+    }
+
+    /* Pricing table full width */
+    table {
+        max-width: 100%;
+    }
+}
+
+/* ── LARGE SCREENS: 1200px+ ── */
+@media (min-width: 1200px) {
+
+    body {
+        max-width: 1100px;
+        font-size: 1.05rem;
+    }
+
+    .image-row img {
+        height: 24rem;
+    }
+
+    .gallery-grid img {
+        width: 18rem;
+        height: 18rem;
+    }
 }
