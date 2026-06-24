@@ -4,34 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- SEO #1: Unique descriptive title -->
         <title>Contact Us | Saraz Makeup Artist – Cape Town</title>
-
-        <!-- SEO #2: Description shown in Google search results -->
         <meta name="description" content="Contact Saraz Makeup Artist in Cape Town. Book your makeup appointment, send us a message, or call 072 019 7504. We'd love to hear from you.">
-
-        <!-- SEO #3: Keywords -->
         <meta name="keywords" content="makeup artist Cape Town, book makeup appointment, contact Saraz makeup, beauty artist CPT, professional makeup South Africa">
-
-        <!-- SEO #4: Author -->
         <meta name="author" content="Saraz Makeup">
-
-        <!-- SEO #5: Tell Google to index this page -->
         <meta name="robots" content="index, follow">
-
-        <!-- SEO #6: Open Graph — how page looks when shared on WhatsApp/Facebook -->
         <meta property="og:title" content="Contact Saraz Makeup Artist – Cape Town">
         <meta property="og:description" content="Book your makeup appointment or send us a message. Professional makeup artist based in Cape Town, SA.">
         <meta property="og:type" content="website">
         <meta property="og:image" content="images/logo.jpeg">
         <meta property="og:locale" content="en_ZA">
-
-        <!-- SEO #7: Canonical URL -->
         <link rel="canonical" href="contact.html">
-
         <link rel="stylesheet" href="css/style.css">
 
-        <!-- SEO #8: Schema.org — lets Google show your business details in search -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -49,145 +34,35 @@
         }
         </script>
 
-        <!-- Form validation + jQuery styles -->
         <style>
-            .contact-section {
+            /* ── EXISTING STYLES ── */
+            .date-banner {
+                text-align: center;
+                background: rgba(238, 187, 187, 0.3);
+                border-radius: 10px;
+                padding: 12px 20px;
+                margin: 16px auto;
                 max-width: 600px;
-                margin: 30px auto;
-                background: rgba(238, 187, 187, 0.15);
-                padding: 30px;
-                border-radius: 12px;
-                box-shadow: 0 3px 14px rgba(0, 0, 0, 0.09);
+                font-family: Georgia, 'Times New Roman', serif;
+                color: #b07882;
+                font-size: 0.95rem;
+                font-weight: bold;
             }
 
-            .form-group {
-                margin-bottom: 15px;
+            .form-wrapper {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                margin: 10px 0 30px;
             }
 
-            .form-group label {
-                font-weight: bold;
-                color: #b07882;
-                margin-bottom: 5px;
-                font-size: 0.9rem;
+            .form-label {
                 font-family: Georgia, 'Times New Roman', serif;
+                color: #b07882;
+                font-size: 0.85rem;
                 letter-spacing: 1px;
                 text-transform: uppercase;
-            }
-
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                padding: 10px;
-                border: 1px solid #d4a0a0;
-                border-radius: 8px;
-                font-size: 0.95rem;
-                background: #fce8e8;
-                font-family: Georgia, 'Times New Roman', serif;
-                color: #2c2c2c;
-            }
-
-            .form-group input:focus,
-            .form-group select:focus,
-            .form-group textarea:focus {
-                outline: none;
-                border-color: #b07882;
-            }
-
-            .form-group input.error,
-            .form-group select.error,
-            .form-group textarea.error {
-                border-color: #c0392b;
-            }
-
-            .error-msg {
-                color: #c0392b;
-                font-size: 0.8rem;
-                margin-top: 3px;
-                font-family: Georgia, 'Times New Roman', serif;
-            }
-
-            .submit-note {
-                font-size: 0.82rem;
-                color: #888888;
-                margin-bottom: 14px;
-                font-family: Georgia, 'Times New Roman', serif;
-            }
-
-            .btn-send {
-                background: #b07882;
-                color: white;
-                border: none;
-                padding: 11px 30px;
-                border-radius: 8px;
-                font-size: 0.95rem;
-                font-family: Georgia, 'Times New Roman', serif;
-                letter-spacing: 1px;
-                cursor: pointer;
-                transition: background 0.2s ease;
-                margin-right: 10px;
-            }
-
-            .btn-send:hover {
-                background: #9a6570;
-            }
-
-            .btn-clear {
-                background: #eebbbb;
-                color: #2c2c2c;
-                border: none;
-                padding: 11px 22px;
-                border-radius: 8px;
-                font-size: 0.95rem;
-                font-family: Georgia, 'Times New Roman', serif;
-                cursor: pointer;
-                transition: background 0.2s ease;
-            }
-
-            .btn-clear:hover {
-                background: #d4a0a0;
-            }
-
-            .success-msg {
-                display: none;
-                background: rgba(238, 187, 187, 0.3);
-                border: 1px solid #b07882;
-                border-radius: 12px;
-                padding: 24px;
-                text-align: center;
-                color: #2c2c2c;
-                font-family: Georgia, 'Times New Roman', serif;
-            }
-
-            .char-counter {
-                font-size: 0.78rem;
-                color: #888888;
-                text-align: right;
-                margin-top: 3px;
-                font-family: Georgia, 'Times New Roman', serif;
-            }
-            .char-counter.near-limit {
-                color: #c0392b;
-            }
-
-            .scroll-btn {
-                display: block;
-                margin: 16px auto 0;
-                background: transparent;
-                border: 1.5px solid #b07882;
-                color: #b07882;
-                padding: 9px 24px;
-                border-radius: 8px;
-                font-family: Georgia, 'Times New Roman', serif;
-                font-size: 0.9rem;
-                letter-spacing: 1px;
-                cursor: pointer;
-                transition: all 0.2s ease;
-            }
-            .scroll-btn:hover {
-                background: #b07882;
-                color: white;
+                margin-bottom: 8px;
             }
 
             #back-to-top {
@@ -207,13 +82,114 @@
                 z-index: 999;
             }
 
-            .field-tip {
-                display: none;
-                font-size: 0.78rem;
+            /* ── PART 1: VALIDATION FORM STYLES ── */
+            .validation-form-section {
+                max-width: 600px;
+                margin: 30px auto;
+                background: rgba(238, 187, 187, 0.15);
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 3px 14px rgba(0, 0, 0, 0.09);
+            }
+
+            .vf-group {
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .vf-group label {
+                font-weight: bold;
                 color: #b07882;
+                margin-bottom: 5px;
+                font-size: 0.9rem;
+                font-family: Georgia, 'Times New Roman', serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .vf-group input,
+            .vf-group select,
+            .vf-group textarea {
+                padding: 10px;
+                border: 1px solid #d4a0a0;
+                border-radius: 8px;
+                font-size: 0.95rem;
+                background: #fce8e8;
+                font-family: Georgia, 'Times New Roman', serif;
+                color: #2c2c2c;
+            }
+
+            .vf-group input:focus,
+            .vf-group select:focus,
+            .vf-group textarea:focus {
+                outline: none;
+                border-color: #b07882;
+            }
+
+            .vf-group input.vf-error,
+            .vf-group select.vf-error,
+            .vf-group textarea.vf-error {
+                border-color: #c0392b;
+            }
+
+            .vf-error-msg {
+                color: #c0392b;
+                font-size: 0.8rem;
                 margin-top: 3px;
                 font-family: Georgia, 'Times New Roman', serif;
-                font-style: italic;
+            }
+
+            .vf-submit-note {
+                font-size: 0.82rem;
+                color: #888888;
+                margin-bottom: 14px;
+                font-family: Georgia, 'Times New Roman', serif;
+            }
+
+            .vf-btn-send {
+                background: #b07882;
+                color: white;
+                border: none;
+                padding: 11px 30px;
+                border-radius: 8px;
+                font-size: 0.95rem;
+                font-family: Georgia, 'Times New Roman', serif;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: background 0.2s ease;
+                margin-right: 10px;
+            }
+
+            .vf-btn-send:hover {
+                background: #9a6570;
+            }
+
+            .vf-btn-clear {
+                background: #eebbbb;
+                color: #2c2c2c;
+                border: none;
+                padding: 11px 22px;
+                border-radius: 8px;
+                font-size: 0.95rem;
+                font-family: Georgia, 'Times New Roman', serif;
+                cursor: pointer;
+            }
+
+            .vf-btn-clear:hover {
+                background: #d4a0a0;
+            }
+
+            .vf-success {
+                display: none;
+                background: rgba(238, 187, 187, 0.3);
+                border: 1px solid #b07882;
+                border-radius: 12px;
+                padding: 24px;
+                text-align: center;
+                color: #2c2c2c;
+                font-family: Georgia, 'Times New Roman', serif;
+                margin-top: 16px;
             }
         </style>
 
@@ -237,13 +213,22 @@
         </div>
 
         <h1>Book your appointment</h1>
-        
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScoyqNbVuBMdCmilA8nef31_nIjT3V-8PIZzBqxdzlqdW793A/viewform?embedded=true" 
-            width="600"
-            height="800"
-            title="Book an appointment with Saraz Makeup">
-        </iframe>
+
+        <!-- JAVASCRIPT: Automatic date shown above the Google Form -->
+        <div class="date-banner" id="date-banner">
+            📅 Today is: <span id="auto-date"></span>
+        </div>
+
+        <!-- JQUERY: Google Form fades in on page load -->
+        <div class="form-wrapper" id="google-form-wrapper">
+            <p class="form-label">Fill in the form below to book</p>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScoyqNbVuBMdCmilA8nef31_nIjT3V-8PIZzBqxdzlqdW793A/viewform?embedded=true" 
+                width="600"
+                height="800"
+                title="Book an appointment with Saraz Makeup">
+            </iframe>
+        </div>
 
         <h1>CONTACT US</h1>
         <p1>
@@ -252,9 +237,9 @@
                 <li>sarazmakeup.za@gmail.com</li>
                 <li>CPT, SA</li>
             </ul>
-            <button class="scroll-btn" id="scroll-to-form">✉ Send us a message ↓</button>
         </p1>
 
+        <!-- JAVASCRIPT: Personalised greeting section -->
         <div class="js-demo" style="margin-top: 40px; padding: 20px; background: rgba(238,187,187,0.3); border-radius: 12px;">
             <h3 style="color: #b07882; letter-spacing: 1px; text-transform: uppercase; font-size: 14px;">Get your personalised greeting</h3>
 
@@ -268,66 +253,65 @@
             <p id="message" style="margin-top: 10px; font-family: Georgia, serif; color: #b07882;"></p>
         </div>
 
-        <div class="contact-section" id="contact-form-section">
+        <!-- PART 2: JAVASCRIPT VALIDATION FORM -->
+        <div class="validation-form-section" id="vf-section">
             <h2>Send Us a Message</h2>
 
-            <form id="contactForm" novalidate>
+            <form id="vf-form" novalidate>
 
-                <div class="form-group">
-                    <label for="fullName">Full Name <span style="color:#c0392b">*</span></label>
-                    <input type="text" id="fullName" placeholder="e.g. Jane Smith">
-                    <span class="field-tip" id="tip-fullName">Enter your first and last name.</span>
-                    <span class="error-msg" id="fullName-error"></span>
+                <div class="vf-group">
+                    <label for="vf-name">Full Name <span style="color:#c0392b">*</span></label>
+                    <input type="text" id="vf-name" placeholder="e.g. Jane Smith">
+                    <span class="vf-error-msg" id="vf-name-error"></span>
                 </div>
 
-                <div class="form-group">
-                    <label for="emailField">Email Address <span style="color:#c0392b">*</span></label>
-                    <input type="email" id="emailField" placeholder="e.g. jane@example.com">
-                    <span class="field-tip" id="tip-emailField">We'll only use this to reply to you.</span>
-                    <span class="error-msg" id="emailField-error"></span>
+                <div class="vf-group">
+                    <label for="vf-email">Email Address <span style="color:#c0392b">*</span></label>
+                    <input type="email" id="vf-email" placeholder="e.g. jane@example.com">
+                    <span class="vf-error-msg" id="vf-email-error"></span>
                 </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number <small style="color:#888888; text-transform:none;">(optional)</small></label>
-                    <input type="tel" id="phone" placeholder="e.g. 072 019 7504">
-                    <span class="error-msg" id="phone-error"></span>
+                <div class="vf-group">
+                    <label for="vf-phone">Phone Number <small style="color:#888; text-transform:none;">(optional)</small></label>
+                    <input type="tel" id="vf-phone" placeholder="e.g. 072 019 7504">
+                    <span class="vf-error-msg" id="vf-phone-error"></span>
                 </div>
 
-                <div class="form-group">
-                    <label for="subject">Subject <span style="color:#c0392b">*</span></label>
-                    <select id="subject">
+                <div class="vf-group">
+                    <label for="vf-subject">Subject <span style="color:#c0392b">*</span></label>
+                    <select id="vf-subject">
                         <option value="">-- Select a subject --</option>
                         <option value="Booking">Booking Enquiry</option>
                         <option value="Pricing">Pricing</option>
                         <option value="General">General Enquiry</option>
                         <option value="Other">Other</option>
                     </select>
-                    <span class="error-msg" id="subject-error"></span>
+                    <span class="vf-error-msg" id="vf-subject-error"></span>
                 </div>
 
-                <div class="form-group">
-                    <label for="userMessage">Message <span style="color:#c0392b">*</span></label>
-                    <textarea id="userMessage" rows="5" placeholder="Write your message here..." maxlength="300"></textarea>
-                    <span class="char-counter" id="char-count">0 / 300 characters</span>
-                    <span class="error-msg" id="userMessage-error"></span>
+                <div class="vf-group">
+                    <label for="vf-message">Message <span style="color:#c0392b">*</span></label>
+                    <textarea id="vf-message" rows="5" placeholder="Write your message here..."></textarea>
+                    <span class="vf-error-msg" id="vf-message-error"></span>
                 </div>
 
-                <p class="submit-note">Submitting on: <strong id="submit-date"></strong></p>
+                <p class="vf-submit-note">Submitting on: <strong id="vf-date"></strong></p>
 
-                <button type="submit" class="btn-send">Send Message</button>
-                <button type="button" class="btn-clear" id="clearBtn">Clear</button>
+                <button type="submit" class="vf-btn-send">Send Message</button>
+                <button type="button" class="vf-btn-clear" id="vf-clear">Clear</button>
 
             </form>
 
-            <div class="success-msg" id="success-msg">
-                <strong style="color: #b07882; font-size: 1.1rem;">&#10003; Thank you!</strong><br><br>
-                Your message has been sent successfully.<br>
-                We'll get back to you at <strong id="success-email"></strong>.
+            <div class="vf-success" id="vf-success">
+                <strong style="color:#b07882; font-size:1.1rem;">&#10003; Thank you!</strong><br><br>
+                Your message has been received.<br>
+                We'll get back to you at <strong id="vf-success-email"></strong>.
                 <br><br>
-                <button class="btn-send" id="anotherBtn">Send Another Message</button>
+                <button class="vf-btn-send" id="vf-another">Send Another Message</button>
             </div>
         </div>
 
+        <!-- JQUERY: Back to top button -->
         <button id="back-to-top" title="Back to top">↑</button>
 
         <script>
@@ -336,8 +320,8 @@
                 var now = new Date();
                 var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
                 var dateStr = now.toLocaleDateString("en-ZA", options);
+                document.getElementById("auto-date").textContent = dateStr;
                 document.getElementById("today-date").textContent = "Today is: " + dateStr;
-                document.getElementById("submit-date").textContent = dateStr;
             }
             updateDate();
             setInterval(updateDate, 1000);
@@ -357,39 +341,98 @@
                 }
             });
 
+            // ── PART 3: FORM VALIDATION ────────────────────────
+            document.getElementById("vf-date").textContent = new Date().toLocaleDateString("en-ZA", {
+                weekday: "long", year: "numeric", month: "long", day: "numeric"
+            });
+
+            document.getElementById("vf-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                var valid = true;
+
+                // Clear previous errors
+                document.querySelectorAll(".vf-error-msg").forEach(function(el) { el.textContent = ""; });
+                document.querySelectorAll(".vf-group input, .vf-group select, .vf-group textarea").forEach(function(el) {
+                    el.classList.remove("vf-error");
+                });
+
+                // Validate Full Name
+                var name = document.getElementById("vf-name").value.trim();
+                if (name === "") {
+                    vfShowError("vf-name", "Full name is required."); valid = false;
+                } else if (name.length < 2) {
+                    vfShowError("vf-name", "Name must be at least 2 characters."); valid = false;
+                }
+
+                // Validate Email
+                var email = document.getElementById("vf-email").value.trim();
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === "") {
+                    vfShowError("vf-email", "Email address is required."); valid = false;
+                } else if (!emailPattern.test(email)) {
+                    vfShowError("vf-email", "Please enter a valid email address."); valid = false;
+                }
+
+                // Validate Phone (optional)
+                var phone = document.getElementById("vf-phone").value.trim();
+                var phonePattern = /^[0-9+\-\s()]{7,15}$/;
+                if (phone !== "" && !phonePattern.test(phone)) {
+                    vfShowError("vf-phone", "Please enter a valid phone number."); valid = false;
+                }
+
+                // Validate Subject
+                var subject = document.getElementById("vf-subject").value;
+                if (subject === "") {
+                    vfShowError("vf-subject", "Please select a subject."); valid = false;
+                }
+
+                // Validate Message
+                var message = document.getElementById("vf-message").value.trim();
+                if (message === "") {
+                    vfShowError("vf-message", "Message is required."); valid = false;
+                } else if (message.length < 10) {
+                    vfShowError("vf-message", "Message must be at least 10 characters."); valid = false;
+                }
+
+                // If all valid — show success
+                if (valid) {
+                    document.getElementById("vf-success-email").textContent = email;
+                    document.getElementById("vf-form").style.display = "none";
+                    document.getElementById("vf-success").style.display = "block";
+                }
+            });
+
+            // Clear button
+            document.getElementById("vf-clear").addEventListener("click", function() {
+                document.getElementById("vf-form").reset();
+                document.querySelectorAll(".vf-error-msg").forEach(function(el) { el.textContent = ""; });
+                document.querySelectorAll(".vf-group input, .vf-group select, .vf-group textarea").forEach(function(el) {
+                    el.classList.remove("vf-error");
+                });
+            });
+
+            // Send another message button
+            document.getElementById("vf-another").addEventListener("click", function() {
+                document.getElementById("vf-form").reset();
+                document.getElementById("vf-form").style.display = "block";
+                document.getElementById("vf-success").style.display = "none";
+            });
+
+            function vfShowError(fieldId, msg) {
+                document.getElementById(fieldId).classList.add("vf-error");
+                document.getElementById(fieldId + "-error").textContent = msg;
+            }
+
             // ── JQUERY SNIPPETS ────────────────────────────────
             $(document).ready(function() {
 
-                // jQuery #1: Fade in the contact form when page loads
-                $("#contact-form-section").hide().fadeIn(1200);
+                // jQuery #1: Google Form fades in on page load
+                $("#google-form-wrapper").hide().fadeIn(1200);
 
-                // jQuery #2: Smooth scroll to form when button is clicked
-                $("#scroll-to-form").on("click", function() {
-                    $("html, body").animate({
-                        scrollTop: $("#contact-form-section").offset().top - 20
-                    }, 700);
-                });
+                // jQuery #2: Date banner slides down on page load
+                $("#date-banner").hide().slideDown(800);
 
-                // jQuery #3: Show helpful tooltip when user clicks into a field
-                $("#fullName, #emailField").on("focus", function() {
-                    $("#tip-" + this.id).slideDown(200);
-                }).on("blur", function() {
-                    $("#tip-" + this.id).slideUp(200);
-                });
-
-                // jQuery #4: Live character counter on the message textarea
-                $("#userMessage").on("input", function() {
-                    var count = $(this).val().length;
-                    var max = 300;
-                    $("#char-count").text(count + " / " + max + " characters");
-                    if (count >= max - 20) {
-                        $("#char-count").addClass("near-limit");
-                    } else {
-                        $("#char-count").removeClass("near-limit");
-                    }
-                });
-
-                // jQuery #5: Show/hide back-to-top button on scroll
+                // jQuery #3: Back to top button appears on scroll
                 $(window).on("scroll", function() {
                     if ($(this).scrollTop() > 300) {
                         $("#back-to-top").fadeIn(300);
@@ -398,89 +441,17 @@
                     }
                 });
 
-                // jQuery #6: Smooth scroll to top when back-to-top is clicked
+                // jQuery #4: Back to top smooth scroll
                 $("#back-to-top").on("click", function() {
                     $("html, body").animate({ scrollTop: 0 }, 600);
                 });
 
-                // jQuery #7: Highlight nav link for current page
+                // jQuery #5: Highlight current nav link
                 $("nav a").each(function() {
                     if ($(this).attr("href") === "contact.html") {
                         $(this).css({ "color": "#b07882", "font-weight": "bold" });
                     }
                 });
-
-                // ── FORM VALIDATION ────────────────────────────
-                $("#contactForm").on("submit", function(e) {
-                    e.preventDefault();
-                    var valid = true;
-
-                    $(".error-msg").text("");
-                    $("input, select, textarea").removeClass("error");
-
-                    var fullName = $("#fullName").val().trim();
-                    if (fullName === "") {
-                        showError("fullName", "Full name is required."); valid = false;
-                    } else if (fullName.length < 2) {
-                        showError("fullName", "Name must be at least 2 characters."); valid = false;
-                    }
-
-                    var email = $("#emailField").val().trim();
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (email === "") {
-                        showError("emailField", "Email address is required."); valid = false;
-                    } else if (!emailPattern.test(email)) {
-                        showError("emailField", "Please enter a valid email (e.g. name@example.com)."); valid = false;
-                    }
-
-                    var phone = $("#phone").val().trim();
-                    var phonePattern = /^[0-9+\-\s()]{7,15}$/;
-                    if (phone !== "" && !phonePattern.test(phone)) {
-                        showError("phone", "Please enter a valid phone number."); valid = false;
-                    }
-
-                    var subject = $("#subject").val();
-                    if (subject === "") {
-                        showError("subject", "Please select a subject."); valid = false;
-                    }
-
-                    var userMessage = $("#userMessage").val().trim();
-                    if (userMessage === "") {
-                        showError("userMessage", "Message is required."); valid = false;
-                    } else if (userMessage.length < 10) {
-                        showError("userMessage", "Message must be at least 10 characters."); valid = false;
-                    }
-
-                    if (valid) {
-                        $("#success-email").text(email);
-                        $("#contactForm").fadeOut(400, function() {
-                            $("#success-msg").fadeIn(500);
-                        });
-                    }
-                });
-
-                // Clear button
-                $("#clearBtn").on("click", function() {
-                    $("#contactForm")[0].reset();
-                    $(".error-msg").text("");
-                    $("input, select, textarea").removeClass("error");
-                    $("#char-count").text("0 / 300 characters").removeClass("near-limit");
-                });
-
-                // Send another message button
-                $("#anotherBtn").on("click", function() {
-                    $("#success-msg").fadeOut(300, function() {
-                        $("#contactForm").trigger("reset");
-                        $("#char-count").text("0 / 300 characters").removeClass("near-limit");
-                        $(".error-msg").text("");
-                        $("#contactForm").fadeIn(400);
-                    });
-                });
-
-                function showError(fieldId, msg) {
-                    $("#" + fieldId).addClass("error");
-                    $("#" + fieldId + "-error").text(msg);
-                }
 
             }); // end $(document).ready
         </script>
